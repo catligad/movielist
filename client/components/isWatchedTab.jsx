@@ -1,27 +1,21 @@
 import React, { Component } from 'react';
 
-class IsWatchedTab extends Component{
-  constructor(props) {
-    super(props);
-  }
 
-  isWatchedClick(){
-    this.props.renderWatched();
-  }
+function IsWatchedTab (props){
 
-  toWatchClick(){
-    this.props.renderToWatch();
+  function isWatchedClick(){
+    props.renderWatched();
   }
-
-  render() {
+  
+  function toWatchClick(){
+    props.renderToWatch();
+  }
     return (
       <span className="tabs">
-        <span className="isWatched" onClick={this.isWatchedClick.bind(this)}>Watched</span>
-        <span className="toWatch" onClick={this.toWatchClick.bind(this)}>ToWatch</span>
+        <span className="isWatched" onClick={isWatchedClick.bind(this)}>Watched</span>
+        <span className="toWatch" onClick={toWatchClick.bind(this)}>ToWatch</span>
       </span>
     )
-  }
-
 }
 
 export default IsWatchedTab;

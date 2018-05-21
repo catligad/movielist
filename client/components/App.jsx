@@ -116,9 +116,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-
         <div className="listTitle" onClick={this.rerenderWholeList.bind(this)}> Cat's Movie List: </div>
-
         <div className="add-bar">
           <Add click={this.addClick.bind(this)} rerender={this.rerenderWholeList.bind(this)} />
         </div>

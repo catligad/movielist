@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
 import Movie from './Movie.jsx';
 
-class List extends Component{
-  constructor(props) {
-    super(props);
-  }
-  render() {
+function List(props) {
     return (
       <div className="list">
-      {this.props.movies.map( (item, index) => (
-        <Movie key={index} index={index} title={item.title} watched={item.watched} watchedClick={this.props.watchedClick} />
+      {props.movies.map( (item, index) => (
+        <Movie key={index} index={index} title={item.title} watched={item.watched} watchedClick={props.watchedClick} />
       ))
       }
       </div>
     )
-  }
-
 }
 
 export default List;
